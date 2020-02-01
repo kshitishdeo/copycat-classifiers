@@ -1,0 +1,51 @@
+VERSION=1.0
+N=20   L=29   
+I=0    W=!NULL               
+I=1    W=!NULL               
+I=2    W=SENT-START          
+I=3    W=Man                 
+I=4    W=!NULL               
+I=5    W=Monkey              
+I=6    W=Car                 
+I=7    W=goes_to             
+I=8    W=!NULL               
+I=9    W=bumps_into          
+I=10   W=weaves_and_bumps_into 
+I=11   W=bump_into_each_other 
+I=12   W=jumps_on            
+I=13   W=man                 
+I=14   W=!NULL               
+I=15   W=monkey              
+I=16   W=car                 
+I=17   W=house               
+I=18   W=fence               
+I=19   W=SENT-END            
+J=0     S=19   E=1    
+J=1     S=0    E=2    
+J=2     S=2    E=3    
+J=3     S=3    E=4    
+J=4     S=5    E=4    
+J=5     S=6    E=4    
+J=6     S=2    E=5    
+J=7     S=2    E=6    
+J=8     S=4    E=7    
+J=9     S=7    E=8    
+J=10    S=9    E=8    
+J=11    S=10   E=8    
+J=12    S=11   E=8    
+J=13    S=12   E=8    
+J=14    S=4    E=9    
+J=15    S=4    E=10   
+J=16    S=4    E=11   
+J=17    S=4    E=12   
+J=18    S=8    E=13   
+J=19    S=13   E=14   
+J=20    S=15   E=14   
+J=21    S=16   E=14   
+J=22    S=17   E=14   
+J=23    S=18   E=14   
+J=24    S=8    E=15   
+J=25    S=8    E=16   
+J=26    S=8    E=17   
+J=27    S=8    E=18   
+J=28    S=14   E=19   

@@ -1,0 +1,58 @@
+###############################################################################
+#
+# Argument 1: name of the feature sets
+# Argument 2: feature vector dimension
+# Argument 3: test sentence (can be 'tip_thumb_hand_dist_all' as well)
+#
+###############################################################################
+
+# Training Script for Verification System
+# Cheryl Wang; Aditya Vishwanath
+
+FEATURESET=$1
+FVECTOR=$2
+SENTENCE=$3
+
+################################################################################
+# Recognition & Statistics
+###############################################################################
+# echo " -------------- Performing Recognition for hmm[9-18] -------------- "
+# echo "Corr    Sub    Del    Ins    Err    S. Err"
+
+# For each model
+for((i=9; i<=18; i++))
+do
+
+  rstFile=hresults/${SENTENCE}/res_${FEATURESET}_hmm${i}.txt
+  if [ -f $rstFile ];
+    then rm $rstFile
+  fi
+
+  # Force alignment / verification
+  MODELFOLDER=models/
+  rcgFile=results/${SENTENCE}/res_${FEATURESET}_hmm${i}.mlf
+  # tsFile=lists/test_file_lists/${SENTENCE}.test
+  tsFile=lists/${SENTENCE}.test
+
+  # For recognition, uncomment the line below
+  # HVite -H ${MODELFOLDER}/hmm${i}/newMacros -S $tsFile -i $rcgFile -w wordNet.txt -s 25 dict.txt wordList
+
+  # HVite with forced alignment
+  # For verification, uncomment one of the lines below
+  
+  # This is the regular HVite
+  # HVite -a -o N -T 1 -H ${MODELFOLDER}/hmm${i}/newMacros -S $tsFile -i $rcgFile -m -y lab -t 250.0 -s 1.0 -p 0.0 -I all_labels.mlf -s 25 dict.txt wordList 
+
+  # This is the special HVite for a specific sentence verification (Here: Alligator Behind Black Wall)
+  HVite -a -T 1 -o N -H ${MODELFOLDER}/hmm${i}/newMacros -S $tsFile -i $rcgFile -m -y lab -t 250.0 -s 1.0 -p 0.0 -I alligator_above_black_wall_test_labels.mlf -s 25 dict.txt wordList 
+
+
+  HResults -h -p -I all_labels.mlf wordList $rcgFile >> $rstFile
+
+  echo "***************************************"
+  echo "***************************************"
+
+  # Accuracy calculation
+  # python python_scripts/calculate_accuracy.py ${rstFile}
+
+done

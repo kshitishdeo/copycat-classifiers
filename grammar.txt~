@@ -1,0 +1,5 @@
+$subject = Man | Monkey | Car ;
+$verb = goes_to | bumps_into | weaves_and_bumps_into | bump_into_each_other | jumps_over;
+$object = man | monkey | car | house | fence;
+
+(SENT-START $subject $verb $object SENT-END)

@@ -1,0 +1,257 @@
+HCompV -A -T 2 -C configs/hcompv.conf -f 0.01 -m -S lists/.train -M models//hmm0 models/prototype 
+HRest -i 60 -l bed -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/bed 
+HRest -i 60 -l snake -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/snake 
+HRest -i 60 -l under -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/under 
+HRest -i 60 -l sil -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/sil 
+HERest -d models//hmm1 -m 1 -v 0.001 -A -L train-labels -M models//hmm2 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm2/newMacros -L train-labels -M models//hmm3 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm3/newMacros -L train-labels -M models//hmm4 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm4/newMacros -L train-labels -M models//hmm5 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm5/newMacros -L train-labels -M models//hmm6 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm6/newMacros -L train-labels -M models//hmm7 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm7/newMacros -L train-labels -M models//hmm8 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm9/newMacros -L train-labels -M models//hmm10 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm10/newMacros -L train-labels -M models//hmm11 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm11/newMacros -L train-labels -M models//hmm12 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm12/newMacros -L train-labels -M models//hmm13 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm13/newMacros -L train-labels -M models//hmm14 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm14/newMacros -L train-labels -M models//hmm15 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm15/newMacros -L train-labels -M models//hmm16 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm16/newMacros -L train-labels -M models//hmm17 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm17/newMacros -L train-labels -M models//hmm18 -S lists/.train -T 1 wordList 
+HCompV -A -T 2 -C configs/hcompv.conf -f 0.01 -m -S lists/.train -M models//hmm0 models/prototype 
+HRest -i 60 -l alligator -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/alligator 
+HRest -i 60 -l bed -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/bed 
+HRest -i 60 -l behind -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/behind 
+HRest -i 60 -l black -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/black 
+HRest -i 60 -l blue -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/blue 
+HRest -i 60 -l box -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/box 
+HRest -i 60 -l cat -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/cat 
+HRest -i 60 -l chair -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/chair 
+HRest -i 60 -l flowers -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/flowers 
+HRest -i 60 -l green -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/green 
+HRest -i 60 -l in -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/in 
+HRest -i 60 -l on -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/on 
+HRest -i 60 -l orange -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/orange 
+HRest -i 60 -l snake -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/snake 
+HRest -i 60 -l spider -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/spider 
+HRest -i 60 -l under -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/under 
+HRest -i 60 -l wagon -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/wagon 
+HRest -i 60 -l wall -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/wall 
+HRest -i 60 -l white -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/white 
+HRest -i 60 -l sil -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/sil 
+HERest -d models//hmm1 -m 1 -v 0.001 -A -L train-labels -M models//hmm2 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm2/newMacros -L train-labels -M models//hmm3 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm3/newMacros -L train-labels -M models//hmm4 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm4/newMacros -L train-labels -M models//hmm5 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm5/newMacros -L train-labels -M models//hmm6 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm6/newMacros -L train-labels -M models//hmm7 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm7/newMacros -L train-labels -M models//hmm8 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm9/newMacros -L train-labels -M models//hmm10 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm10/newMacros -L train-labels -M models//hmm11 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm11/newMacros -L train-labels -M models//hmm12 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm12/newMacros -L train-labels -M models//hmm13 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm13/newMacros -L train-labels -M models//hmm14 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm14/newMacros -L train-labels -M models//hmm15 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm15/newMacros -L train-labels -M models//hmm16 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm16/newMacros -L train-labels -M models//hmm17 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm17/newMacros -L train-labels -M models//hmm18 -S lists/.train -T 1 wordList 
+HCompV -A -T 2 -C configs/hcompv.conf -f 0.01 -m -S lists/.train -M models//hmm0 models/prototype 
+HRest -i 60 -l alligator -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/alligator 
+HRest -i 60 -l bed -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/bed 
+HRest -i 60 -l behind -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/behind 
+HRest -i 60 -l black -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/black 
+HRest -i 60 -l blue -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/blue 
+HRest -i 60 -l box -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/box 
+HRest -i 60 -l cat -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/cat 
+HRest -i 60 -l chair -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/chair 
+HRest -i 60 -l flowers -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/flowers 
+HRest -i 60 -l green -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/green 
+HRest -i 60 -l in -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/in 
+HRest -i 60 -l on -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/on 
+HRest -i 60 -l orange -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/orange 
+HRest -i 60 -l snake -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/snake 
+HRest -i 60 -l spider -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/spider 
+HRest -i 60 -l under -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/under 
+HRest -i 60 -l wagon -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/wagon 
+HRest -i 60 -l wall -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/wall 
+HRest -i 60 -l white -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/white 
+HRest -i 60 -l sil -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/sil 
+HERest -d models//hmm1 -m 1 -v 0.001 -A -L train-labels -M models//hmm2 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm2/newMacros -L train-labels -M models//hmm3 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm3/newMacros -L train-labels -M models//hmm4 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm4/newMacros -L train-labels -M models//hmm5 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm5/newMacros -L train-labels -M models//hmm6 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm6/newMacros -L train-labels -M models//hmm7 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm7/newMacros -L train-labels -M models//hmm8 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm9/newMacros -L train-labels -M models//hmm10 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm10/newMacros -L train-labels -M models//hmm11 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm11/newMacros -L train-labels -M models//hmm12 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm12/newMacros -L train-labels -M models//hmm13 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm13/newMacros -L train-labels -M models//hmm14 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm14/newMacros -L train-labels -M models//hmm15 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm15/newMacros -L train-labels -M models//hmm16 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm16/newMacros -L train-labels -M models//hmm17 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm17/newMacros -L train-labels -M models//hmm18 -S lists/.train -T 1 wordList 
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/.train -M models//hmm0 models/prototype 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/alligator 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/bed 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/above 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/black 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/blue 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/box 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/lion 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/chair 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/flowers 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/grey 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/in 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/orange 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/snake 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/monkey 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/below 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/wagon 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/wall 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/white 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/sil 
+HERest -d models//hmm1 -v 0.001 -A -I all_labels.mlf -M models//hmm2 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm2/newMacros -I all_labels.mlf -M models//hmm3 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm3/newMacros -I all_labels.mlf -M models//hmm4 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm4/newMacros -I all_labels.mlf -M models//hmm5 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm5/newMacros -I all_labels.mlf -M models//hmm6 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm6/newMacros -I all_labels.mlf -M models//hmm7 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm7/newMacros -I all_labels.mlf -M models//hmm8 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm9/newMacros -I all_labels.mlf -M models//hmm10 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm10/newMacros -I all_labels.mlf -M models//hmm11 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm11/newMacros -I all_labels.mlf -M models//hmm12 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm12/newMacros -I all_labels.mlf -M models//hmm13 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm13/newMacros -I all_labels.mlf -M models//hmm14 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm14/newMacros -I all_labels.mlf -M models//hmm15 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm15/newMacros -I all_labels.mlf -M models//hmm16 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm16/newMacros -I all_labels.mlf -M models//hmm17 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm17/newMacros -I all_labels.mlf -M models//hmm18 -S lists/.train -T 1 wordList 
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/.train -M models//hmm0 models/prototype 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/alligator 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/bed 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/above 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/black 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/blue 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/box 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/lion 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/chair 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/flowers 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/grey 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/in 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/orange 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/snake 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/monkey 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/below 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/wagon 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/wall 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/white 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/sil 
+HERest -d models//hmm1 -v 0.001 -A -I all_labels.mlf -M models//hmm2 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm2/newMacros -I all_labels.mlf -M models//hmm3 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm3/newMacros -I all_labels.mlf -M models//hmm4 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm4/newMacros -I all_labels.mlf -M models//hmm5 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm5/newMacros -I all_labels.mlf -M models//hmm6 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm6/newMacros -I all_labels.mlf -M models//hmm7 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm7/newMacros -I all_labels.mlf -M models//hmm8 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm9/newMacros -I all_labels.mlf -M models//hmm10 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm10/newMacros -I all_labels.mlf -M models//hmm11 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm11/newMacros -I all_labels.mlf -M models//hmm12 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm12/newMacros -I all_labels.mlf -M models//hmm13 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm13/newMacros -I all_labels.mlf -M models//hmm14 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm14/newMacros -I all_labels.mlf -M models//hmm15 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm15/newMacros -I all_labels.mlf -M models//hmm16 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm16/newMacros -I all_labels.mlf -M models//hmm17 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm17/newMacros -I all_labels.mlf -M models//hmm18 -S lists/.train -T 1 wordList 
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/.train -M models//hmm0 models/prototype 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/alligator 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/bed 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/above 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/black 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/blue 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/box 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/lion 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/chair 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/flowers 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/grey 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/in 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/orange 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/snake 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/monkey 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/below 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/wagon 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/wall 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/white 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/sil 
+HERest -d models//hmm1 -v 0.001 -A -I all_labels.mlf -M models//hmm2 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm2/newMacros -I all_labels.mlf -M models//hmm3 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm3/newMacros -I all_labels.mlf -M models//hmm4 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm4/newMacros -I all_labels.mlf -M models//hmm5 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm5/newMacros -I all_labels.mlf -M models//hmm6 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm6/newMacros -I all_labels.mlf -M models//hmm7 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm7/newMacros -I all_labels.mlf -M models//hmm8 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm9/newMacros -I all_labels.mlf -M models//hmm10 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm10/newMacros -I all_labels.mlf -M models//hmm11 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm11/newMacros -I all_labels.mlf -M models//hmm12 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm12/newMacros -I all_labels.mlf -M models//hmm13 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm13/newMacros -I all_labels.mlf -M models//hmm14 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm14/newMacros -I all_labels.mlf -M models//hmm15 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm15/newMacros -I all_labels.mlf -M models//hmm16 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm16/newMacros -I all_labels.mlf -M models//hmm17 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm17/newMacros -I all_labels.mlf -M models//hmm18 -S lists/.train -T 1 wordList 
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/.train -M models//hmm0 models/prototype 
+HRest -i 60 -l man -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/man 
+HRest -i 60 -l monkey -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/monkey 
+HRest -i 60 -l car -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/car 
+HRest -i 60 -l fence -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/fence 
+HRest -i 60 -l house -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/house 
+HRest -i 60 -l goes_to -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/goes_to 
+HRest -i 60 -l jumps_over -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/jumps_over 
+HRest -i 60 -l bumps_into -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/bumps_into 
+HRest -i 60 -l weaves_and_bumps_into -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/weaves_and_bumps_into 
+HRest -i 60 -l bumps_into_each_other -C configs/hcompv.conf -m 1 -t -v 0.2 -A -L train-labels -M models//hmm1 -S lists/.train -T 1 models//hmm0/bumps_into_each_other 
+HERest -d models//hmm1 -m 1 -v 0.001 -A -L train-labels -M models//hmm2 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm2/newMacros -L train-labels -M models//hmm3 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm3/newMacros -L train-labels -M models//hmm4 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm4/newMacros -L train-labels -M models//hmm5 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm5/newMacros -L train-labels -M models//hmm6 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm6/newMacros -L train-labels -M models//hmm7 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm7/newMacros -L train-labels -M models//hmm8 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm9/newMacros -L train-labels -M models//hmm10 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm10/newMacros -L train-labels -M models//hmm11 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm11/newMacros -L train-labels -M models//hmm12 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm12/newMacros -L train-labels -M models//hmm13 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm13/newMacros -L train-labels -M models//hmm14 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm14/newMacros -L train-labels -M models//hmm15 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm15/newMacros -L train-labels -M models//hmm16 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm16/newMacros -L train-labels -M models//hmm17 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -m 1 -A -H models//hmm17/newMacros -L train-labels -M models//hmm18 -S lists/.train -T 1 wordList 
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/.train -M models//hmm0 models/prototype 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/man 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/monkey 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/car 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/fence 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/house 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/goes_to 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/jumps_over 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/bumps_into 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/weaves_and_bumps_into 
+HRest -i 60 -C configs/hcompv.conf -v 0.2 -A -I all_labels.mlf -M models//hmm1 -S lists/.train models//hmm0/bumps_into_each_other 
+HERest -d models//hmm1 -v 0.001 -A -I all_labels.mlf -M models//hmm2 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm2/newMacros -I all_labels.mlf -M models//hmm3 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm3/newMacros -I all_labels.mlf -M models//hmm4 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm4/newMacros -I all_labels.mlf -M models//hmm5 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm5/newMacros -I all_labels.mlf -M models//hmm6 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm6/newMacros -I all_labels.mlf -M models//hmm7 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm7/newMacros -I all_labels.mlf -M models//hmm8 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm9/newMacros -I all_labels.mlf -M models//hmm10 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm10/newMacros -I all_labels.mlf -M models//hmm11 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm11/newMacros -I all_labels.mlf -M models//hmm12 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm12/newMacros -I all_labels.mlf -M models//hmm13 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm13/newMacros -I all_labels.mlf -M models//hmm14 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm14/newMacros -I all_labels.mlf -M models//hmm15 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm15/newMacros -I all_labels.mlf -M models//hmm16 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm16/newMacros -I all_labels.mlf -M models//hmm17 -S lists/.train -T 1 wordList 
+HERest -v 0.001 -A -H models//hmm17/newMacros -I all_labels.mlf -M models//hmm18 -S lists/.train -T 1 wordList 

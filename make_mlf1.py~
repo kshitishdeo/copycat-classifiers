@@ -1,0 +1,36 @@
+fileName="lists/tip_thumb_hand_dist.train"
+
+f = open(fileName,"r") 
+output= open("all_labels.mlf",'w')
+output.write("#!MLF!#\n")
+for line in f:
+	split_end=line.split("/")
+	end_str=split_end[-1]
+	split_str=end_str.split(".")[0]
+	#output.write('"*/',split_str,".lab")
+	output.write("%s%s%s\n" % (('"*/'),(split_str),('.lab"')))
+	output.write("sil\n")
+	new=split_str.split("_")
+	a1=new[1]
+	
+	a_end=new[-1]
+	for i in range(1, len(new)-1):
+		if i==1:
+			output.write("%s\n" % (new[i]))
+		elif i==2:
+			if new[i]=="car" or new[i]=="man" or new[i]=="monkey":
+				end=new[i]
+			else:
+				output.write("%s%s\n" % ((new[i]),("_")))
+				end=""
+		elif i==len(new)-1:
+			output.write("%s\n" % (new[i]))
+
+		elif i==len(new)-2:
+			output.write("%s\n" % (new[i]))
+		
+		output.write("%s\n" % (i))	
+			
+	output.write("sil\n")
+	output.write(".\n")
+	print split_str
